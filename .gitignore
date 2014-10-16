@@ -1,0 +1,4 @@
+# Composer
+vendor
+drupal/*
+!drupal/project
