@@ -2,3 +2,6 @@
 vendor
 drupal/*
 !drupal/project
+
+# Config
+config/environment.php

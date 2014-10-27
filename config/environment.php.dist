@@ -1,0 +1,13 @@
+<?php
+
+$environment = '{ENVIRONMENT}';
+
+$parameters = array(
+  'environment' => array(),
+  'rescued' => array(
+    'app_name' => '{RESCUED_APP_NAME}',
+    'url' => '{RESCUED_URL}',
+    'key_file' => '{RESCUED_KEY_FILE}',
+    'iss' => '{RESCUED_ISS}',
+  ),
+);
