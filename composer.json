@@ -4,6 +4,7 @@
     "description": "xTuple Drupal project",
     "minimum-stability": "dev",
     "require": {
+        "cdd/drupal-installer-plugin": "dev-master",
         "cdd/code-driven-drupal": "dev-master"
     },
     "require-dev": {
