@@ -3,6 +3,11 @@
     "type": "project",
     "description": "xTuple Drupal project",
     "minimum-stability": "dev",
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
+    },
     "require": {
         "cdd/drupal-installer-plugin": "dev-master",
         "cdd/code-driven-drupal": "dev-master"
