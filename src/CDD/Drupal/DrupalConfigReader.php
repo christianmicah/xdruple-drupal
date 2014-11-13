@@ -58,6 +58,7 @@ class DrupalConfigReader {
           'label' => 'xtuple',
           'url' => "$url/discovery/v1alpha1/apis/v1alpha1/rest",
           'type' => 'discovery',
+          'api_url' => "$url/api/v1alpha1",
         ),
       );
     }
