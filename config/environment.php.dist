@@ -9,5 +9,6 @@ $parameters = array(
     'url' => '{RESCUED_URL}',
     'key_file' => '{RESCUED_KEY_FILE}',
     'iss' => '{RESCUED_ISS}',
+    'debug' => '{RESCUED_DEBUG}',
   ),
 );

@@ -33,6 +33,7 @@ class DrupalConfigReader {
       $url = $settings['url'];
       $iss = $settings['iss'];
       $key_file = $settings['key_file'];
+      $debug = isset($settings['debug']) ? $settings['debug'] : TRUE;
 
       $rescued_clients = array(
         'xtuple' => array(
@@ -51,7 +52,7 @@ class DrupalConfigReader {
               'scope' => "$url/auth",
               'prn' => 'admin',
               'grant_type' => 'assertion',
-              'debug' => TRUE,
+              'debug' => $debug,
             ),
           ),
           'name' => 'xtuple',
