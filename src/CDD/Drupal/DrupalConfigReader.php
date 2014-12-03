@@ -5,8 +5,14 @@ class DrupalConfigReader {
   private $config = array();
 
   public function __construct($environment, array $config = array(), array $parameters = array()) {
-    $this->config = array_merge_recursive($config, $parameters);
     $this->environment = $environment;
+
+    if (!empty($config['environment'][$environment]) && !empty($parameters['environment'])) {
+      $env = &$config['environment'][$environment];
+      $env = array_merge_recursive($env, $parameters['environment']);
+      unset($parameters['environment']);
+    }
+    $this->config = array_merge_recursive($config, $parameters);
   }
 
   public function read() {
@@ -15,13 +21,30 @@ class DrupalConfigReader {
       if (method_exists($this, $method)) {
         $this->$method($settings);
       }
+      else {
+        $this->otherSettings($namespace, $settings);
+      }
     }
+  }
+
+  protected function otherSettings($namespace, $settings) {
+    global $environment;
+    if (empty($environment)) {
+      $environment = array();
+    }
+    if (empty($environment[$namespace])) {
+      $environment[$namespace] = array();
+    }
+    $environment[$namespace] = array_merge_recursive($environment[$namespace], $settings);
   }
 
   protected function environmentSettings($settings) {
     if (!empty($settings[$this->environment])) {
       global $environment;
-      $environment = $settings[$this->environment];
+      if (empty($environment)) {
+        $environment = array();
+      }
+      $environment = array_merge_recursive($environment, $settings[$this->environment]);
     }
   }
 

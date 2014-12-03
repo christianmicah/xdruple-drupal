@@ -1,14 +1,37 @@
 <?php
 
-$environment = '{ENVIRONMENT}';
+$environment_name = '{ENVIRONMENT}';
 
-$parameters = array(
-  'environment' => array(),
-  'rescued' => array(
-    'app_name' => '{RESCUED_APP_NAME}',
-    'url' => '{RESCUED_URL}',
-    'key_file' => '{RESCUED_KEY_FILE}',
-    'iss' => '{RESCUED_ISS}',
-    'debug' => '{RESCUED_DEBUG}',
-  ),
+$parameters = array();
+
+/**
+ * Environment-only settings
+ */
+$parameters['environment'] = array();
+
+/**
+ * RESCUED settings
+ */
+$parameters['rescued'] = array(
+  'app_name' => '{RESCUED_APP_NAME}',
+  'url' => '{RESCUED_URL}',
+  'key_file' => '{RESCUED_KEY_FILE}',
+  'iss' => '{RESCUED_ISS}',
+  'debug' => '{RESCUED_DEBUG}',
 );
+
+/**
+ * Commerce Authorize.Net settings
+ */
+$parameters['commerce_authnet_aim'] = array(
+  'login' => '{COMMERCE_AUTHNET_AIM_LOGIN}',
+  'tran_key' => '{COMMERCE_AUTHNET_AIM_TRANSACTION_KEY}',
+);
+
+/**
+ * Commerce UPS
+ */
+$parameters['environment']['commerce_ups_account_id'] = '{COMMERCE_UPS_ACCOUNT_ID}';
+$parameters['environment']['commerce_ups_access_key'] = '{COMMERCE_UPS_ACCESS_KEY}';
+$parameters['environment']['commerce_ups_user_id'] = '{COMMERCE_UPS_USER_ID}';
+$parameters['environment']['commerce_ups_password'] = '{COMMERCE_UPS_PASSWORD}';
