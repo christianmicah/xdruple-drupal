@@ -40,6 +40,10 @@ $config = array(
       'page_compression' => 1,
       'preprocess_css' => 1,
       'preprocess_js' => 1,
+      'xdruple_cache_entities' => array(
+        'commerce_product',
+        'xtuple_xdproduct',
+      ),
       'commerce_authnet_aim' => array(
         'txn_mode' => 'developer',
         'log' => array(
