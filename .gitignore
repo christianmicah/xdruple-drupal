@@ -5,6 +5,7 @@ drupal/*
 
 # Config
 config/environment.php
+config/settings.php
 
 # User generated content
 web

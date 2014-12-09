@@ -20,5 +20,13 @@
             "type": "composer",
             "url": "satis.codedrivendrupal.com"
         }
-    ]
+    ],
+    "scripts": {
+        "post-package-install": [
+           "CDD\\Composer\\ComposerScripts::postPackageInstall"
+        ],
+        "post-package-update": [
+            "CDD\\Composer\\ComposerScripts::postPackageUpdate"
+        ]
+    }
 }
