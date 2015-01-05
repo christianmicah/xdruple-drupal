@@ -8,10 +8,21 @@ Step 1. Run Composer `create-project` command on your (virtual) server:
 composer create-project --stability dev --no-interaction --repository-url=http://satis.codedrivendrupal.com xtuple/xdruple-drupal project.xd
 ```
 
-Step 2. Go to project directory and initialize a new repo
+Step 1a. Edit `project.xd/composer.json` file; require appropriate Drupal profile:
+
+```...
+"require": {
+    "cdd/drupal-installer-plugin": "dev-master",
+    "profiles/base": "dev-master"
+}
+```
+
+Step 1b. Go to project directory `cd project.xd` and run `composer update`
+
+Step 2. Initialize a new repo
 
 ```
-cd project.xd && git init
+git init
 ```
 
 Step 3. Add default features set and Core module into `drupal/project/modules`
