@@ -1,32 +1,31 @@
 {
-    "name": "xtuple/xdruple-drupal",
-    "type": "project",
-    "description": "xTuple Drupal project",
-    "minimum-stability": "dev",
-    "autoload": {
-        "psr-0": {
-            "": "src/"
-        }
-    },
-    "require": {
-        "cdd/drupal-installer-plugin": "dev-master",
-        "cdd/code-driven-drupal": "dev-master"
-    },
-    "require-dev": {
-        "composer/composer": "~1.0@dev"
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "satis.codedrivendrupal.com"
-        }
-    ],
-    "scripts": {
-        "post-package-install": [
-           "CDD\\Composer\\ComposerScripts::postPackageInstall"
-        ],
-        "post-package-update": [
-            "CDD\\Composer\\ComposerScripts::postPackageUpdate"
-        ]
+  "name": "xtuple/xdruple-drupal",
+  "type": "project",
+  "description": "xTuple Drupal project",
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-0": {
+      "": "src/"
     }
+  },
+  "require": {
+    "cdd/drupal-installer-plugin": "dev-master"
+  },
+  "require-dev": {
+    "composer/composer": "~1.0@dev"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "satis.codedrivendrupal.com"
+    }
+  ],
+  "scripts": {
+    "post-package-install": [
+      "CDD\\Composer\\ComposerScripts::postPackageInstall"
+    ],
+    "post-package-update": [
+      "CDD\\Composer\\ComposerScripts::postPackageUpdate"
+    ]
+  }
 }
