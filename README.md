@@ -25,6 +25,13 @@ Step 2. Initialize a new repo
 git init
 ```
 
+Step 2a. Add remote (Github) and push code to it
+
+```
+git remote add origin git@github.com:xtuple/xtuple-marketplace.git
+git push --all origin
+```
+
 Step 3. Add default features set and Core module into `drupal/project/modules`
 
 Step 4. Initialized default theme. 
