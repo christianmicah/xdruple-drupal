@@ -12,7 +12,8 @@
     "cdd/drupal-installer-plugin": "dev-master"
   },
   "require-dev": {
-    "composer/composer": "~1.0@dev"
+    "composer/composer": "~1.0@dev",
+    "phpunit/phpunit": "4.5.*"
   },
   "repositories": [
     {
