@@ -22,17 +22,8 @@
     }
   ],
   "scripts": {
-    "pre-package-install": [
-      "CDD\\Composer\\ComposerScripts::prePackageInstall"
-    ],
-    "post-package-install": [
-      "CDD\\Composer\\ComposerScripts::postPackageInstall"
-    ],
-    "pre-package-update": [
-      "CDD\\Composer\\ComposerScripts::prePackageUpdate"
-    ],
-    "post-package-update": [
-      "CDD\\Composer\\ComposerScripts::postPackageUpdate"
+    "post-create-project-cmd": [
+      "cp drupal/extensions/modules/xtuple/xdruple/dist/console.php.dist ./console.php && chmod +x ./console.php"
     ]
   }
 }
