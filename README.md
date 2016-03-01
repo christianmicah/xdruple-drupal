@@ -8,33 +8,21 @@ Step 1. Run Composer `create-project` command on your (virtual) server:
 composer create-project --stability dev --no-interaction --repository-url=http://satis.codedrivendrupal.com xtuple/xdruple-drupal project.xd
 ```
 
-Step 1a. Edit `project.xd/composer.json` file; require appropriate Drupal profile:
-
-```...
-"require": {
-    "cdd/drupal-installer-plugin": "dev-master",
-    "profiles/base": "dev-master"
-}
-```
-
-Step 1b. Go to project directory `cd project.xd` and run `composer update`
-
-Step 2. Initialize a new repo
+Step 2. Go to project directory and load install all vendor packaged:
 
 ```
-git init
+cd project.xd && composer update
 ```
 
-Step 2a. Add remote (Github) and push code to it
+Step 3. Initialize a new repo and push it to your Github repo:
 
 ```
-git remote add origin git@github.com:xtuple/xtuple-marketplace.git
+git init && \
+git remote add origin git@github.com:your-organization/project-repo.git && \
 git push --all origin
 ```
 
-Step 3. Add default features set and Core module into `drupal/project/modules`
-
-Step 4. Initialized default theme. 
+Step 4. Initialize default theme.
 
 Step 5. Remove "Creating a new project" part from `README.md`, change the title and update Installation instruction to be more concrete.
 
@@ -45,7 +33,7 @@ Step 6. Add and commit all files. Publish code to Github.
 Step 1. Clone the repository:
 
 ```
-git clone git@github.com:xtuple/project-repo.git project.xd
+git clone git@github.com:your-organization/project-repo.git project.xd
 ```
 
 Step 2. Go to project directory and switch to `develop` branch:
@@ -54,7 +42,7 @@ Step 2. Go to project directory and switch to `develop` branch:
 cd project.xd && git checkout develop
 ```
 
-Step 3. Run `composer install`:
+Step 3. Install vendors:
 
 ```
 composer install
