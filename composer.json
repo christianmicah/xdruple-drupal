@@ -23,8 +23,14 @@
     }
   ],
   "scripts": {
+    "pre-package-install": [
+      "CDD\\Composer\\ComposerScripts::prePackageInstall"
+    ],
     "post-package-install": [
       "CDD\\Composer\\ComposerScripts::postPackageInstall"
+    ],
+    "pre-package-update": [
+      "CDD\\Composer\\ComposerScripts::prePackageUpdate"
     ],
     "post-package-update": [
       "CDD\\Composer\\ComposerScripts::postPackageUpdate"
