@@ -9,7 +9,6 @@
     }
   },
   "require": {
-    "cdd/drupal-installer-plugin": "dev-master",
     "profiles/base": "dev-master"
   },
   "require-dev": {
