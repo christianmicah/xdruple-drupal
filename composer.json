@@ -9,7 +9,7 @@
     }
   },
   "require": {
-    "profiles/base": "dev-master"
+    "profiles/xdruple": "dev-master"
   },
   "require-dev": {
     "composer/composer": "~1.0@dev",
