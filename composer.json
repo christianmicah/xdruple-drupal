@@ -23,7 +23,7 @@
   ],
   "scripts": {
     "post-create-project-cmd": [
-      "cp drupal/extensions/modules/xtuple/xdruple/dist/console.php.dist ./console.php && chmod +x ./console.php"
+      "cp drupal/extensions/profiles/xdruple/dist/console.php.dist ./console.php && chmod +x ./console.php"
     ]
   }
 }
